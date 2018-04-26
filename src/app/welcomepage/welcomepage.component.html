@@ -1,0 +1,31 @@
+<h1>Questionnaire</h1>
+
+<form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)" >
+  <h1>What is your age?</h1>
+  <input type="radio" value="<25" name="age"><25
+  <input type="radio" value="<45" name="age"><45
+  <input type="radio" value="<65" name="age"><65
+  <input type="radio" value="<85" name="age"><85
+
+  <br/>
+  <h1>How would you like to improve fitness?</h1>
+  <input type="checkbox" value="gym" name="chck">Gym Workout
+  <input type="checkbox" value="diet" name="chk">Diet
+  <input type="checkbox" value="Running" name="ck">Running
+
+  <br/>
+  <h1>How would you like to exercise ?</h1>
+  <input type="radio" value="light exercise" name="age">light exercise
+  <input type="radio" value="medium exercise" name="age">medium exercise
+  <input type="radio" value="heavy exercise" name="age">heavy exercise
+
+
+
+
+
+  <input type = "submit" value = "submit">
+</form>
+
+
+
+
