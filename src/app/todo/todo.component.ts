@@ -10,9 +10,27 @@ import {TodoDataService} from '../todo-data.service';
   providers: [TodoDataService]
 })
 export class TodoComponent implements OnInit {
-  newTodo: Todo = new Todo();
 
-  constructor(private todoDataService: TodoDataService) { }
+  newTodo: Todo = new Todo();
+  weightLossTasks: string[] = ['Stability ball back extension', 
+                              'Seated resistance band row',
+                              'Stability ball-rollout',
+                              'Stability ball knee tucks',
+                              'Spiderman',
+                              'Stability ball side lift',
+                              'Stability ball Oblique crunch',
+                              'Stability ball straight leg crunches']
+
+  constructor(private todoDataService: TodoDataService) { 
+
+    
+    for (let i = 0; i < this.weightLossTasks.length; i++) {
+      this.newTodo.title = this.weightLossTasks[i];
+      this.addTodo();
+    }
+
+  }
+  
   addTodo() {
     this.todoDataService.addTodo(this.newTodo);
     this.newTodo = new Todo();

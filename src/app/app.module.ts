@@ -11,9 +11,10 @@ import { WelcomepageComponent } from './welcomepage/welcomepage.component';
 
 
 const appRoutes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'Fitness', component: TodoComponent},
-  {path: 'Welcome Page', component: WelcomepageComponent}
+  {path: 'welcome', component: HomeComponent},
+  {path: 'recommendations', component: TodoComponent},
+  {path: 'questions', component: WelcomepageComponent},
+  {path: '**', redirectTo: 'welcome'}
 ];
 
 

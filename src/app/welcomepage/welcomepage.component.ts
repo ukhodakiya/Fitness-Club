@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-welcomepage',
@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomepageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
+  }
+
+  onClickSubmit() {
+    this.router.navigate(['/recommendations']);
   }
 }

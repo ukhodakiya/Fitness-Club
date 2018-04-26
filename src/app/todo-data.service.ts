@@ -19,7 +19,7 @@ export class TodoDataService {
     if (!todo.id) {
       todo.id = ++this.lastId;
     }
-    this.todos.push(todo);
+    this.todos.unshift(todo);
     return this;
   }
 
