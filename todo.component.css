@@ -1,0 +1,9 @@
+.todo-list li, .new-todo {
+  font-size: 12px;
+}
+
+.todoapp h1 {
+  color: dodgerblue;
+  font-size: 40px;
+  top: -130px;
+}
