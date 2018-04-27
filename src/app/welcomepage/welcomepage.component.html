@@ -1,28 +1,35 @@
+<div class="homePage welcome">
 <h1>Questionnaire</h1>
-
-<form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)" >
-  <h1>What is your age?</h1>
-  <input type="radio" value="<25" name="age"><25
-  <input type="radio" value="<45" name="age"><45
-  <input type="radio" value="<65" name="age"><65
-  <input type="radio" value="<85" name="age"><85
-
-  <br/>
-  <h1>How would you like to improve fitness?</h1>
-  <input type="checkbox" value="gym" name="chck">Gym Workout
-  <input type="checkbox" value="diet" name="chk">Diet
-  <input type="checkbox" value="Running" name="ck">Running
+</div>
+<div class="welcome">
+  <h3>What is your age group ? *</h3>
+  <input type="radio" value="25" name="age" [(ngModel)]="age">Children (< 14)
+  <input type="radio" value="45" name="age" [(ngModel)]="age">Youth (15 - 24)
+  <input type="radio" value="65" name="age" [(ngModel)]="age">Adults (25 - 64)
+  <input type="radio" value="85" name="age" [(ngModel)]="age">Senior Citizens (> 64)
 
   <br/>
-  <h1>How would you like to exercise ?</h1>
-  <input type="radio" value="light exercise" name="age">light exercise
-  <input type="radio" value="medium exercise" name="age">medium exercise
-  <input type="radio" value="heavy exercise" name="age">heavy exercise
+  <br/>
+
+  <h3>How would you like to improve fitness? *</h3>
+  <div *ngFor="let ft of fitness; let i=index">
+    <input type="checkbox" [(ngModel)]="userChoice[ft]"> {{ft}}
+  </div>
 
 
-  <input type = "submit" value = "submit">
-</form>
+  <!--<input type="checkbox" value="gym" name="chck" [(ngModel)]="gym">Gym Workout
+  <input type="checkbox" value="diet" name="chk" [(ngModel)]="diet">Diet
+  <input type="checkbox" value="Running" name="ck" [(ngModel)]="run">Running-->
 
+  <br/>
+  <h3>How would you like to exercise ? *</h3>
+  <input type="radio" value="1" name="l" [(ngModel)]="intensity">light exercise
+  <input type="radio" value="2" name="m" [(ngModel)]="intensity">medium exercise
+  <input type="radio" value="3" name="h" [(ngModel)]="intensity">heavy exercise
 
+</div>
 
+<div *ngIf="error" class="error-msg"><span>Please answer all mandatory questions to view your recommended tasks</span></div>
+<button class="btn btn-primary submitBtn" type="button" value="Submit" (click)="onClickSubmit()">Submit</button>
 
+<!--<input type = "submit" value = "submit" (click)="onClickSubmit()">-->

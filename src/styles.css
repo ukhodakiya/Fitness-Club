@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+
+.btn {
+  border-radius: 6px;
+  background-color: #2196f3;
+  border: 2px solid #2196f3;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 20px;
+  padding: 5px 15px;
+}
+
+h3 {
+  color: #2196f3;
+}
+
+.startBtn, .submitBtn {
+  position: relative;
+  left: 190px;
+  top: 20px;
+  width: 150px;
+  height: 45px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.submitBtn {
+  width: 90px;
+  height: 35px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.homePage {
+  /*margin-top: 40px;*/
+}
+
+.homePage h1 {
+  margin: 60px 80px;
+}
+
+.welcome h1 {
+  color: blue;
+}
+
+.welcome h3 {
+  color: green;
+}
+
+
+.error-msg {
+ margin-top: 30px;
+  color: red;
+}
+
+.homePage img {
+  position: relative;
+  left: -25%;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.todoapp h1 {
+  margin-top: 60px;
+}
